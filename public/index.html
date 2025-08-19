@@ -4,13 +4,35 @@
   <meta charset="UTF-8">
   <title>Happy Birthday!</title>
   <style>
-    body { text-align: center; font-family: sans-serif; background: #fff0f5; }
-    h1 { color: #ff69b4; }
-    img { width: 300px; }
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #fff0f5;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .image-row img {
+      width: 150px;
+    }
+    .cake {
+      width: 300px;
+    }
   </style>
 </head>
 <body>
-  <h1>🎉 Happy Birthday, Binh! 🎉</h1>
-  <img src="cake.png" alt="Birthday Cake">
+  <h1>🎉 Happy Birthday, Thanh Mai! 🎉</h1>
+  <div class="image-row">
+    <img src="capoo.gif" alt="Capoo GIF">
+    <img class="cake" src="cake.png" alt="Birthday Cake">
+    <img src="chikawa.gif" alt="Chikawa GIF">
+  </div>
 </body>
 </html>
