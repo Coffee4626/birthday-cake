@@ -81,7 +81,16 @@
 
   <div class="confetti" id="confetti"></div>
   <div class="hearts" id="hearts"></div>
-
+    <div style="margin-top: 40px; text-align: center;">
+    <img src=giftbox.png alt="Gift Box" id="giftBox" style="width: 120px; cursor: pointer;">
+    <div id="birthdayMessage" style="display: none; margin-top: 20px; font-size: 1.5em; color: #ff1493;">
+      🎈 Wishing you the happiest birthday, Thanh Mai! May your day be filled with love, laughter, and cake! 🎂💖
+    </div>
+  </div>
+  <audio id="birthdayMusic" autoplay loop muted>
+    <source src=music.m4a type="audio/m4a">
+    Your browser does not support the audio element.
+  </audio>
   <script>
   const confettiContainer = document.getElementById('confetti');
   const confettiSymbols = ['🎉', '💖', '🌈', '⭐️'];
@@ -131,16 +140,5 @@
   `;
   document.head.appendChild(style);
   </script>
-    <div style="margin-top: 40px; text-align: center;">
-    <img src=giftbox.png alt="Gift Box" id="giftBox" style="width: 120px; cursor: pointer;">
-    <div id="birthdayMessage" style="display: none; margin-top: 20px; font-size: 1.5em; color: #ff1493;">
-      🎈 Wishing you the happiest birthday, Thanh Mai! May your day be filled with love, laughter, and cake! 🎂💖
-    </div>
-  </div>
-  <audio id="birthdayMusic" autoplay loop muted>
-    <source src=music.m4a type="audio/m4a">
-    Your browser does not support the audio element.
-  </audio>
-
 </body>
 </html>
