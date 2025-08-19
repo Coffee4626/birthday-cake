@@ -83,36 +83,38 @@
   <div class="hearts" id="hearts"></div>
 
   <script>
-    const confettiContainer = document.getElementById('confetti');
-    const heartContainer = document.getElementById('hearts');
-    const confettiSymbols = ['🎉', '💖', '🌈', '⭐️'];
+  const confettiContainer = document.getElementById('confetti');
+  const confettiSymbols = ['🎉', '💖', '🌈', '⭐️'];
 
-    for (let i = 0; i < 80; i++) {
-      const confetti = document.createElement('div');
-      confetti.classList.add('confetti-piece');
-      confetti.textContent = confettiSymbols[Math.floor(Math.random() * confettiSymbols.length)];
-      confetti.style.left = Math.random() * 100 + 'vw';
-      confetti.style.animationDelay = Math.random() * 4 + 's';
-      confetti.style.fontSize = (Math.random() * 20 + 20) + 'px';
-      confettiContainer.appendChild(confetti);
-    }
+  for (let i = 0; i < 80; i++) {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti-piece');
+    confetti.textContent = confettiSymbols[Math.floor(Math.random() * confettiSymbols.length)];
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.bottom = '0';
+    confetti.style.animationDelay = Math.random() * 4 + 's';
+    confetti.style.fontSize = (Math.random() * 20 + 20) + 'px';
+    confettiContainer.appendChild(confetti);
+  }
 
-    // Heart ring effect
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2.2;
-    const radius = 200;
-    for (let i = 0; i < 30; i++) {
-      const angle = (i / 30) * Math.PI * 2;
-      const x = centerX + radius * Math.cos(angle);
-      const y = centerY + radius * Math.sin(angle);
-      const heart = document.createElement('div');
-      heart.classList.add('heart-piece');
-      heart.textContent = '❤️';
-      heart.style.left = x + 'px';
-      heart.style.top = y + 'px';
-      heart.style.animation = 'heartPulse 2s infinite';
-      heartContainer.appendChild(heart);
-    }
+    
+  const heartContainer = document.getElementById('hearts');
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2.2;
+  const scale = 12;
+
+  for (let t = 0; t < Math.PI * 2; t += 0.2) {
+    const x = scale * 16 * Math.pow(Math.sin(t), 3);
+    const y = -scale * (13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
+    const heart = document.createElement('div');
+    heart.classList.add('heart-piece');
+    heart.textContent = '❤️';
+    heart.style.left = centerX + x + 'px';
+    heart.style.top = centerY + y + 'px';
+    heart.style.animation = 'heartPulse 2s infinite';
+    heartContainer.appendChild(heart);
+  }
+
   </script>
 </body>
 </html>
