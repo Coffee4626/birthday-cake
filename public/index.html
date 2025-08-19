@@ -21,6 +21,7 @@
     h1 {
       color: #ff69b4;
       font-size: 3em;
+      margin-top: 60px;
       margin-bottom: 40px;
     }
 
@@ -98,13 +99,16 @@
     z-index: 9999;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     animation: fadeIn 1s ease-out;
+    max-width: 80%;
+    text-align: center;
   ">
     🎈 Wishing you the happiest birthday, Thanh Mai! May your day be filled with love, laughter, and cake! 🎂💖
   </div>
+
   </div>
   <audio id="birthdayMusic" autoplay loop muted>
-    <source src=music.m4a type="audio/m4a">
-    Your browser does not support the audio element.  
+    <source src="music.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
   <script>
   const confettiContainer = document.getElementById('confetti');
@@ -125,7 +129,7 @@
   const heartContainer = document.getElementById('hearts');
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2.2;
-  const scale = 30;
+  const scale = 28;
 
   for (let t = 0; t < Math.PI * 2; t += 0.2) {
     const x = scale * 16 * Math.pow(Math.sin(t), 3);
